@@ -1,10 +1,7 @@
 import React from 'react';
 
 function App() {
-  return (
-    <>
-    </>
-  );
+  return <>ㅋ</>;
 }
 
 export default App;
