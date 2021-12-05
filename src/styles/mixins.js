@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import {css} from '@emotion/react';
+import { css } from '@emotion/react';
 
 // 텍스트 말줄임 처리
-export const mixinTextOverflow = clamp => css`
+export const mixinEllipsisText = (clamp) => css`
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: ${clamp || 1};

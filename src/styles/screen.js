@@ -1,4 +1,4 @@
-const screen = {
+const SCREEN = {
   MOBILE: '360px',
   MOBILE_L: '425px',
   TABLET: '992px',
@@ -6,4 +6,4 @@ const screen = {
   PC: '1200px',
 };
 
-export default screen;
+export default SCREEN;
