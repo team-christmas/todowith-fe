@@ -14,6 +14,14 @@ module.exports = {
 		soureType: 'module'
 	},
 
+	settings: {
+		'import/resolver': {
+			node: {
+				paths: ['src']
+			}
+		}
+	},
+
 	plugins: ['react', 'react-hooks', 'import', 'prettier', 'jsx-a11y'],
 
 	rules: {
@@ -51,9 +59,6 @@ module.exports = {
 
 		// trailing comma 해제
 		'comma-dangle': 'off',
-
-		// 비어있는 객체일 경우 중괄호 사이 줄넘김 금지
-		'object-curly-newline': ['warn', { multiline: true }],
 
 		// JSX 속성에 홑따옴표 사용 가능
 		'jsx-quotes': ['error', 'prefer-single'],
