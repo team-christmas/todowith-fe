@@ -3,7 +3,7 @@ import React from 'react';
 const IndexPage = () => {
   return (
     <>
-      Main (Temp)
+      Index Page (Temp)
     </>
   );
 };
