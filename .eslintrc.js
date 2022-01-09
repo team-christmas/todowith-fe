@@ -56,6 +56,8 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
 
     // PropTypes 사용하지 않게 변경
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+
+    'no-console': ['warn', {allow: ['log', 'warn', 'error']}],
   }
 };
