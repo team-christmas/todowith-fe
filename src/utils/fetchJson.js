@@ -19,7 +19,7 @@ const request = async (method, url, data = {}) => {
   }
 };
 
-export default {
+export const fetchJson = {
   get: (url, data) => request(FetchConsts.GET, url, data),
   post: (url, data) => request(FetchConsts.POST, url, data),
   put: (url, data) => request(FetchConsts.PUT, url, data),
