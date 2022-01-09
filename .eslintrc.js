@@ -4,8 +4,6 @@ module.exports = {
     es2021: true
   },
 
-  extends: ['airbnb', 'prettier', 'plugin:react/recommended'],
-
   parserOptions: {
     ecmaFeature: {
       jsx: true
@@ -22,17 +20,11 @@ module.exports = {
     }
   },
 
+  extends: ['airbnb-base', 'prettier', 'plugin:react/recommended'],
   plugins: ['react', 'react-hooks', 'import', 'prettier', 'jsx-a11y'],
 
   rules: {
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'function-declaration'
-      }
-    ],
-
-    // 불필요한 공수를 줄이기 위해 js 대신 js를 허용
+    // 불필요한 공수를 줄이기 위해 jsx 대신 js를 허용
     'react/jsx-filename-extension': 'off',
 
     // 사용하지 않는 변수 에러에서 경고로 변경
