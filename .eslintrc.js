@@ -56,6 +56,9 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
 
     // PropTypes 사용하지 않게 변경
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+
+    // 하나만 export 할때 무조건 default 로 해야하는 규칙 제거
+    'import/prefer-default-export': 'off'
   }
 };
