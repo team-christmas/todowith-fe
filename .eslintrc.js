@@ -21,6 +21,7 @@ module.exports = {
   },
 
   extends: ['airbnb-base', 'prettier', 'plugin:react/recommended'],
+  parser: 'babel-eslint',
   plugins: ['react', 'react-hooks', 'import', 'prettier', 'jsx-a11y'],
 
   rules: {
@@ -60,6 +61,6 @@ module.exports = {
 
     'no-console': ['warn', {allow: ['log', 'warn', 'error']}],
 
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
   }
 };
