@@ -3,20 +3,16 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router";
 import Layout from './pages/Layout';
 import IndexPage from './pages/IndexPage';
+import URL from './constants/url';
 
-const Router = () => {
-
-  return (
-    <>
+const Router = () => (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path={URL.ROOT} element={<Layout />}>
           <Route index element={<IndexPage />} />
         </Route>
       </Routes>      
     </BrowserRouter>
-    </>
-  )
-};
+  );
 
 export default Router;

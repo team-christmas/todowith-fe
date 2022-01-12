@@ -1,11 +1,3 @@
-import React from 'react';
-
-const IndexPage = () => {
-  return (
-    <>
-      Index Page (Temp)
-    </>
-  );
-};
+const IndexPage = () => 'Temp';
 
 export default IndexPage;
