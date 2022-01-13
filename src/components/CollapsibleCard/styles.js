@@ -7,10 +7,15 @@ export const StyledCard = styled.div`
   padding: 16px;
 `;
 
-export const StyledTitle = styled.div``;
+export const StyledTitle = styled.div`
+  cursor: pointer;
+`;
 
 export const StyledBody = styled.div`
-  transition: height 0.1s ease-in;
+  transition-property: opacity, height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
   height: ${({ height }) => (Number(height) ? `${height}px` : height)};
+  opacity: ${({ height }) => (Number(height) ? 1 : 0)};
   overflow: hidden;
 `;
