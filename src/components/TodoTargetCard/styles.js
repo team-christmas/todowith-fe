@@ -36,3 +36,20 @@ export const StyledListItem = styled.li`
   list-style: none;
   margin-bottom: 14px;
 `;
+
+export const StyledAddButton = styled.button`
+  width: 48px;
+  height: 48px;
+  background: ${(props) => props.color};
+  border-radius: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: white;
+  border: none;
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+  cursor: pointer;
+`;

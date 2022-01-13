@@ -2,6 +2,7 @@ import CollapsibleCard from 'components/CollapsibleCard';
 import Todo from 'components/Todo';
 import { useState } from 'react';
 import {
+  StyledAddButton,
   StyledCaretSymbol,
   StyledListItem,
   StyledPointColor,
@@ -19,8 +20,10 @@ const TodoTargetCard = ({ title, color, todos }) => {
     const todo = todos.find((item) => item.id === id);
     todo.label = e.target.value;
 
-    rerender(todo.label);
+    rerender([]);
   };
+
+  const addTodo = () => {};
 
   return (
     <CollapsibleCard
@@ -46,6 +49,9 @@ const TodoTargetCard = ({ title, color, todos }) => {
           </StyledListItem>
         ))}
       </StyledTodoList>
+      <StyledAddButton color={color} onClick={addTodo}>
+        +
+      </StyledAddButton>
     </CollapsibleCard>
   );
 };

@@ -5,6 +5,7 @@ export const StyledCard = styled.div`
   background: white;
   border-radius: 6px;
   padding: 16px;
+  position: relative;
 `;
 
 export const StyledTitle = styled.div`
