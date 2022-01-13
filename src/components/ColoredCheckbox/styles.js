@@ -14,6 +14,7 @@ export const StyledCheckbox = styled.span`
   justify-content: center;
   align-items: center;
   border: 1px solid ${PALETTE.GRAY_300};
+  box-sizing: border-box;
   background: white;
   border-radius: 3px;
   color: ${PALETTE.WHITE};
