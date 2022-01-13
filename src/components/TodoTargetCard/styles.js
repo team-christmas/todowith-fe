@@ -32,12 +32,7 @@ export const StyledTodoList = styled.ul`
   padding-top: 24px;
 `;
 
-export const StyledLabel = styled.span`
-  padding-left: 8px;
-  color: ${PALETTE.BLACK};
-`;
-
-export const StyledTodoItem = styled.li`
+export const StyledListItem = styled.li`
   list-style: none;
   margin-bottom: 14px;
 `;

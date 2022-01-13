@@ -1,18 +1,26 @@
 import CollapsibleCard from 'components/CollapsibleCard';
-import ColoredCheckbox from 'components/ColoredCheckbox';
+import Todo from 'components/Todo';
 import { useState } from 'react';
 import {
   StyledCaretSymbol,
-  StyledLabel,
+  StyledListItem,
   StyledPointColor,
   StyledTitle,
   StyledTitleText,
-  StyledTodoItem,
   StyledTodoList
 } from './styles';
 
 const TodoTargetCard = ({ title, color, todos }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+  // 더미 데이터를 이용해 업데이트 구현
+  const [_, rerender] = useState();
+  const updateTodo = (id) => (e) => {
+    const todo = todos.find((item) => item.id === id);
+    todo.label = e.target.value;
+
+    rerender(todo.label);
+  };
 
   return (
     <CollapsibleCard
@@ -28,13 +36,14 @@ const TodoTargetCard = ({ title, color, todos }) => {
     >
       <StyledTodoList>
         {todos.map((todo) => (
-          <StyledTodoItem key={todo.id}>
-            <ColoredCheckbox
-              color={color}
-              label={<StyledLabel>{todo.label}</StyledLabel>}
+          <StyledListItem key={todo.id}>
+            <Todo
               defaultChecked={todo.defaultChecked}
+              color={color}
+              content={todo.label}
+              setContent={updateTodo(todo.id)}
             />
-          </StyledTodoItem>
+          </StyledListItem>
         ))}
       </StyledTodoList>
     </CollapsibleCard>
