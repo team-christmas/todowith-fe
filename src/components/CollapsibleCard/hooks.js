@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useToggle(defaultState) {
-  const [flag, setFlag] = useState(defaultState);
+export function useToggle(inheritState, callback = () => {}) {
+  const [flagState, setFlag] = useState(inheritState);
+  const flag = inheritState || flagState;
+
   const toggle = () => {
-    setFlag((prev) => !prev);
+    setFlag(!flag);
+    callback(!flag);
   };
 
   return [flag, toggle];
