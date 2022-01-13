@@ -1,7 +1,7 @@
 import { useHeight, useToggle } from './hooks';
 import { StyledBody, StyledCard, StyledTitle } from './styles';
 
-const CollapsibleCard = ({ title, body, isUnfold = false, className }) => {
+const CollapsibleCard = ({ title, children, isUnfold = false, className }) => {
   const [isVisible, toggle] = useToggle(isUnfold);
   const { ref, height } = useHeight();
   let bodyHeight = 'auto';
@@ -13,7 +13,7 @@ const CollapsibleCard = ({ title, body, isUnfold = false, className }) => {
     <StyledCard className={className}>
       <StyledTitle onClick={toggle}>{title}</StyledTitle>
       <StyledBody ref={ref} height={bodyHeight}>
-        {body}
+        {children}
       </StyledBody>
     </StyledCard>
   );
