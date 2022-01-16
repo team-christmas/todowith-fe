@@ -1,11 +1,10 @@
-import CollapsibleCard from 'components/CollapsibleCard';
 import Todo from 'components/Todo';
 import { useState } from 'react';
 import {
   StyledAddButton,
   StyledCaretSymbol,
+  StyledCollapsibleCard,
   StyledListItem,
-  StyledPointColor,
   StyledTitle,
   StyledTitleText,
   StyledTodoList
@@ -26,12 +25,12 @@ const TodoTargetCard = ({ title, color, todos }) => {
   const addTodo = () => {};
 
   return (
-    <CollapsibleCard
+    <StyledCollapsibleCard
       collapseState={isCollapsed}
       collapseCallback={setIsCollapsed}
+      color={color}
       title={
         <StyledTitle>
-          <StyledPointColor color={color} />
           <StyledTitleText>{title}</StyledTitleText>
           <StyledCaretSymbol>{isCollapsed ? 'v' : '^'}</StyledCaretSymbol>
         </StyledTitle>
@@ -52,7 +51,7 @@ const TodoTargetCard = ({ title, color, todos }) => {
       <StyledAddButton color={color} onClick={addTodo}>
         +
       </StyledAddButton>
-    </CollapsibleCard>
+    </StyledCollapsibleCard>
   );
 };
 

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import CollapsibleCard from 'components/CollapsibleCard';
 import PALETTE from 'styles/palette';
 
 export const StyledTitle = styled.div`
@@ -12,6 +13,10 @@ export const StyledPointColor = styled.span`
   border-radius: 3px;
   background-color: ${(props) => props.color};
   margin-right: 20px;
+`;
+
+export const StyledCollapsibleCard = styled(CollapsibleCard)`
+  border-left: 5px solid ${(props) => props.color};
 `;
 
 export const StyledTitleText = styled.h3`
