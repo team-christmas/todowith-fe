@@ -1,18 +1,25 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router";
-import Layout from './pages/Layout';
-import IndexPage from './pages/IndexPage';
+import { useRoutes } from "react-router-dom";
+import { Layout } from './components';
+import { IndexPage } from './pages';
 import URL from './constants/url';
 
-const Router = () => (
-    <BrowserRouter>
-      <Routes>
-        <Route path={URL.ROOT} element={<Layout />}>
-          <Route index element={<IndexPage />} />
-        </Route>
-      </Routes>      
-    </BrowserRouter>
-  );
+const Elements = () => {
+  const element = useRoutes([
+    {
+      path : URL.ROOT,
+      element : <Layout/>,
+      children: [
+        {
+          index: true,
+          element : <IndexPage />,
+        },
+      ],
+    }
+  ]);
+  return element;
 
-export default Router;
+};
+
+
+export default Elements;
